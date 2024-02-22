@@ -1,0 +1,50 @@
+/*
+program description/purpose: to calculate the area of either a circle or a retangle 
+programmer: Zainab
+Date: 22 Feb 2024
+*/
+
+//Preprocessor directives
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+	int choice;
+	double radius, length, width, area;
+	const double PI = 3.142;
+	
+	cout << "Choose a shape to calculate its area: " << endl;
+	cout << "1. Circle" << endl;
+	cout << "2. Retangle" << endl;
+	cout << "Enter your choice (1 or 2): ";
+	cin >> choice;
+	
+	if (choice == 1) {
+		cout << "Enter the radius of the circle: ";
+		cin >> radius;
+		//Calculate the radius of the circle
+		area = PI * pow(radius, 2);
+		cout << "Area of the circle is : " << area << endl;
+	}
+	else if (choice == 2) {
+		cout << "Enter the length of the retangle: ";
+		cin >> length;
+		cout << "Enter the width of the retangle: " ;
+		cin >> width;
+		
+		//Calculate area of retangle
+		    area = length * width;
+		    cout << "Area of the retangle is: " << area << endl;
+		
+		if (length <= 0 || width <= 0) {
+			cout << "Invalid input. Length and width cannot be negative. " << endl;	
+		}
+	}
+	else 
+	    cout << "Invalid choice. Please enter 1 or 2. " << endl;
+	//end of if    
+	
+	return 0;
+	
+}//end of main
